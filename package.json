@@ -1,0 +1,117 @@
+{
+	"name": "makefile-command-runner",
+	"displayName": "Makefile Command Runner",
+	"description": "Run and watch your test files",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.35.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:extension.executeRunTestCommand",
+		"onCommand:extension.executeWatchTestCommand",
+		"onView:makefile"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"configuration": {
+			"type": "object",
+			"title": "Makefile command runner - configuration",
+			"properties": {
+				"makefileCommandRunner.makefilePath": {
+					"type": "string",
+					"default": "local",
+					"description": "Path to a Makefile",
+					"scope": "resource"
+				},
+				"makefileCommandRunner.unitTestCommand": {
+					"type": "string",
+					"default": "test-unit",
+					"description": "Unit test command",
+					"scope": "resource"
+				},
+				"makefileCommandRunner.integrationTestCommand": {
+					"type": "string",
+					"default": "test-integration",
+					"description": "Integration test command",
+					"scope": "resource"
+				},
+				"makefileCommandRunner.unitTestWatchCommand": {
+					"type": "string",
+					"default": "test-unit-watch",
+					"description": "Unit test watch command",
+					"scope": "resource"
+				},
+				"makefileCommandRunner.integrationTestWatchCommand": {
+					"type": "string",
+					"default": "test-integration-watch",
+					"description": "Integration test watch command",
+					"scope": "resource"
+				},
+				"makefileCommandRunner.filePathEnv": {
+					"type": "string",
+					"default": "FILE_PATH",
+					"description": "File path environment varible used to pass down the relative file path",
+					"scope": "resource"
+				}
+			}
+		},
+		"viewsContainers": {
+			"activitybar": [
+				{
+					"id": "package-explorer",
+					"title": "Package Explorer",
+					"icon": "./menu.svg"
+				}
+			]
+		},
+		"views": {
+			"package-explorer": [
+				{
+					"id": "makefile",
+					"name": "Makefile"
+				}
+			]
+		},
+		"commands": [
+			{
+				"command": "extension.executeRunTestCommand",
+				"title": "Run test"
+			},
+			{
+				"command": "extension.executeWatchTestCommand",
+				"title": "Run and watch test"
+			}
+		],
+		"menus": {
+			"explorer/context": [
+				{
+					"command": "extension.executeRunTestCommand",
+					"group": "6_copypath@31"
+				},
+				{
+					"command": "extension.executeWatchTestCommand",
+					"group": "6_copypath@31"
+				}
+			]
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "yarn run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "yarn run compile && node ./node_modules/vscode/bin/test"
+	},
+	"devDependencies": {
+		"@types/mocha": "^2.2.42",
+		"@types/node": "^10.12.21",
+		"prettier": "^1.18.2",
+		"tslint": "^5.12.1",
+		"tslint-config-prettier": "^1.18.0",
+		"typescript": "^3.3.1",
+		"vscode": "^1.1.28"
+	}
+}
