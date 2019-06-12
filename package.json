@@ -2,13 +2,18 @@
 	"name": "makefile-command-runner",
 	"displayName": "Makefile Command Runner",
 	"description": "Run and watch your test files",
-	"version": "0.0.1",
+	"version": "1.0.0",
+	"publisher": "madmous",
 	"engines": {
 		"vscode": "^1.35.0"
 	},
 	"categories": [
 		"Other"
 	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Madmous/vscode-makefile-command-runner.git"
+	},
 	"activationEvents": [
 		"onCommand:extension.executeRunTestCommand",
 		"onCommand:extension.executeWatchTestCommand",
