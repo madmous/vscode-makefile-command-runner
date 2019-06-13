@@ -24,8 +24,7 @@
 		"url": "https://github.com/Madmous/vscode-makefile-command-runner/issues"
 	},
 	"galleryBanner": {
-		"color": "#df643b",
-		"theme": "dark"
+		"color": "#f7f7f7"
 	},
 	"activationEvents": [
 		"onCommand:extension.executeRunTestCommand",
