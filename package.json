@@ -1,18 +1,27 @@
 {
 	"name": "makefile-command-runner",
 	"displayName": "Makefile Command Runner",
-	"description": "Run and watch your test files",
+	"description": "VS Code plugin that empowers Makefile users",
 	"version": "1.0.0",
 	"publisher": "madmous",
+	"author": "Moustapha Amadou Diouf <@madmous>",
 	"engines": {
 		"vscode": "^1.35.0"
 	},
+	"keywords": [
+		"makefile command"
+	],
 	"categories": [
 		"Other"
 	],
+	"homepage": "https://marketplace.visualstudio.com/items?itemName=madmous.makefile-command-runner",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/Madmous/vscode-makefile-command-runner.git"
+	},
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/Madmous/vscode-makefile-command-runner/issues"
 	},
 	"activationEvents": [
 		"onCommand:extension.executeRunTestCommand",
