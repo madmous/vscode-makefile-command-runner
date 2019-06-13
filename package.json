@@ -28,6 +28,7 @@
 		"onCommand:extension.executeWatchTestCommand",
 		"onView:makefile"
 	],
+	"icon": "icon.png",
 	"main": "./out/extension.js",
 	"contributes": {
 		"configuration": {
@@ -77,7 +78,7 @@
 				{
 					"id": "package-explorer",
 					"title": "Package Explorer",
-					"icon": "./menu.svg"
+					"icon": "src/sidebar-icon.svg"
 				}
 			]
 		},
