@@ -2,7 +2,7 @@
 	"name": "makefile-command-runner",
 	"displayName": "Makefile Command Runner",
 	"description": "VS Code plugin that empowers Makefile users",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"publisher": "madmous",
 	"author": "Moustapha Amadou Diouf <@madmous>",
 	"engines": {
