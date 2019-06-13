@@ -81,8 +81,8 @@
 			"activitybar": [
 				{
 					"id": "makefile-command-runner",
-					"title": "Makefile Command Runner",
-					"icon": "src/sidebar-icon.svg"
+					"title": "Makefile Command Run",
+					"icon": "media/sidebar-icon.svg"
 				}
 			]
 		},
