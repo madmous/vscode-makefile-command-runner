@@ -1,7 +1,7 @@
 {
 	"name": "makefile-command-runner",
 	"displayName": "Makefile Command Runner",
-	"description": "VS Code plugin that empowers Makefile users",
+	"description": "Empower the Makefile capabilities built into Visual Studio Code — Run any command from the sidebar, run and watch tests by right clicking either on a file or folder",
 	"version": "1.0.2",
 	"publisher": "madmous",
 	"author": "Moustapha Amadou Diouf <@madmous>",
@@ -23,6 +23,10 @@
 	"bugs": {
 		"url": "https://github.com/Madmous/vscode-makefile-command-runner/issues"
 	},
+	"galleryBanner": {
+        "color": "#df643b",
+        "theme": "dark"
+    },
 	"activationEvents": [
 		"onCommand:extension.executeRunTestCommand",
 		"onCommand:extension.executeWatchTestCommand",
