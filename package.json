@@ -80,17 +80,17 @@
 		"viewsContainers": {
 			"activitybar": [
 				{
-					"id": "package-explorer",
-					"title": "Package Explorer",
+					"id": "makefile-command-runner",
+					"title": "Makefile Command Runner",
 					"icon": "src/sidebar-icon.svg"
 				}
 			]
 		},
 		"views": {
-			"package-explorer": [
+			"makefile-command-runner": [
 				{
 					"id": "makefile",
-					"name": "Makefile"
+					"name": ""
 				}
 			]
 		},
