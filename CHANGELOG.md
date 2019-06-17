@@ -1,3 +1,7 @@
+## 1.4.1
+
+- Make a short tutorial or a video on how to use the extension
+
 ## 1.3.1
 
 - Reload window when settings are updated
