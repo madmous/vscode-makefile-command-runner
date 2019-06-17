@@ -1,3 +1,7 @@
+## 1.2.1
+
+- Add changelog file
+
 ## 1.2.0
 
 - Allow the makefil name to be configurable
