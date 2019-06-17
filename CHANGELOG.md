@@ -1,3 +1,7 @@
+## 1.3.1
+
+- Reload window when settings are updated
+
 ## 1.2.1
 
 - Add changelog file
