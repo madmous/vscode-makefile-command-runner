@@ -10,8 +10,10 @@ export type Config = {
   integrationTestWatchCommand: string;
 };
 
+export const CONFIGURATION_NAME = 'makefileCommandRunner';
+
 const getConfig = (): Config => {
-  const config = workspace.getConfiguration("makefileCommandRunner");
+  const config = workspace.getConfiguration(CONFIGURATION_NAME);
 
   return {
     makefilePath: config.makefilePath,

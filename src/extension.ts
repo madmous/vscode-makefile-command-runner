@@ -1,28 +1,32 @@
-import { commands, ExtensionContext, window } from "vscode";
+import { commands, ExtensionContext, window, workspace } from "vscode";
+import { executeMakefileCommand, executeRunTestCommand, executeWatchTestCommand } from "./commands";
+import getConfig, { CONFIGURATION_NAME } from "./config";
 import TaskTreeDataProvider from "./provider";
-import {
-  executeRunTestCommand,
-  executeMakefileCommand,
-  executeWatchTestCommand
-} from "./commands";
-import getConfig from "./config";
 
 export const activate = (context: ExtensionContext) => {
   const config = getConfig();
+  const provider = new TaskTreeDataProvider(config);
 
-  commands.registerCommand(
-    "extension.executeRunTestCommand",
-    executeRunTestCommand(config)
+  context.subscriptions.push(
+    commands.registerCommand(
+      "extension.executeRunTestCommand",
+      executeRunTestCommand(config)
+    ),
+    commands.registerCommand(
+      "extension.executeWatchTestCommand",
+      executeWatchTestCommand(config)
+    ),
+    commands.registerCommand(
+      "extension.executeMakefileCommand",
+      executeMakefileCommand(config)
+    ),
+    window.registerTreeDataProvider("makefile", provider),
+    workspace.onDidChangeConfiguration(e => {
+      if (e.affectsConfiguration(CONFIGURATION_NAME)) {
+        commands.executeCommand("workbench.action.reloadWindow");
+      }
+    })
   );
-  commands.registerCommand(
-    "extension.executeWatchTestCommand",
-    executeWatchTestCommand(config)
-  );
-  commands.registerCommand(
-    "extension.executeMakefileCommand",
-    executeMakefileCommand(config)
-  );
-  window.registerTreeDataProvider("makefile", new TaskTreeDataProvider(config));
 };
 
 export const deactivate = () => {};

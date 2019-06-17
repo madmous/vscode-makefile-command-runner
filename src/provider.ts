@@ -1,6 +1,6 @@
 import { TreeDataProvider, TreeItem, TreeItemCollapsibleState, workspace } from "vscode";
-import extractCommands from "./parser";
 import { Config } from "./config";
+import extractCommands from "./parser";
 
 export default class TaskTreeDataProvider implements TreeDataProvider<TreeItem> {
   config: Config;
