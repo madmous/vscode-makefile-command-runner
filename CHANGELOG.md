@@ -1,9 +1,50 @@
-# Change Log
+## 1.2.0
 
-All notable changes to the "makefile-test-runner" extension will be documented in this file.
+- Allow the makefil name to be configurable
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
+## 1.1.3
 
-## [Unreleased]
+- Cuztomise marketplace gallery banner
 
-- Initial release
+## 1.1.2
+
+- Redisign icon
+
+## 1.1.1
+
+- Cneter sidebar icon
+
+## 1.1.0
+
+- Fix sidebar icon dimensions
+
+## 1.0.6
+
+- Reorganize medias
+
+## 1.0.5
+
+- Sidebar labels and icons
+
+## 1.0.4
+
+- Fix svg dimensions
+
+## 1.0.3
+
+- Improve extension readme and visual
+
+## 1.0.2
+
+- Add extension icons
+
+## 1.0.1
+
+- Improve manifest informations
+
+
+## 1.0.0
+
+**Feature comlete**
+- Show makefile commands in sidebar
+- Run and watch tests from a right click
