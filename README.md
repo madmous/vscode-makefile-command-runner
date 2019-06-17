@@ -16,3 +16,34 @@ This extension contributes the following variables to the settings:
 - unitTestWatchCommand: use this setting to set the unit test watch command, for exmample unit-test-all-watch
 - integrationTestWatchCommand: use this setting to set the integration test watch command, for exmample integration-test-all-watch
 - filePathEnv: use this setting to set the file path environment variable used to pass down to node scripts the file path, for example FILE_PATH
+
+## Features
+
+### Commands view
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Madmous/vscode-makefile-command-runner/master/media/docs/view-commands.png" alt="Commands view" />
+</p>
+
+A view to visualize and explore Makefile commands
+
+### Explorer menu
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Madmous/vscode-makefile-command-runner/master/media/docs/run-test.png" alt="Commands view" />
+</p>
+
+Adds "Run test" and "Run and watch test" in the explorer menu
+- Use `right click` to open the menu
+
+## How to use
+
+1. Locate your makefile path and name. Example for a makefile located in bin/make and named Makefile.main
+
+1. Open settings and update Makefile path and Makefile name
+
+1. Check the remaining settings and make sure you update them correctly according to your project
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Madmous/vscode-makefile-command-runner/master/media/docs/demo.gif" alt="Commands view" />
+</p>
