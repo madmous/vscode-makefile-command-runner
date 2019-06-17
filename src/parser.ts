@@ -13,7 +13,7 @@ const getFileContent = async (filePath: string): Promise<Content> => {
   let document;
 
   try {
-    document = await workspace.openTextDocument(`${filePath}/Makefile.core`);
+    document = await workspace.openTextDocument(filePath);
   } catch (e) {
     throw new ConfigurationError(
       'Makefile cannot be read. Check the configuration and update the makefilePath'

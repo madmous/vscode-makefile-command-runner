@@ -6,7 +6,7 @@ import ConfigurationError from "../ConfigurationError";
 suite("parser", () => {
   test("should retreive makefile commands", async () => {
     // given
-    const path = resolve(__dirname, `../../src/test`);
+    const path = resolve(__dirname, `../../src/test/Makefile`);
 
     // when
     const commands = await extractCommands(path);

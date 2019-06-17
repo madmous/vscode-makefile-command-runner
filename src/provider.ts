@@ -17,7 +17,8 @@ export default class TaskTreeDataProvider implements TreeDataProvider<TreeItem> 
     const children: TreeItem[] = [];
 
     if (workspace.rootPath) {
-      const commands = await extractCommands(`${workspace.rootPath}/${this.config.makefilePath}`);
+      const filePath = `${workspace.rootPath}/${this.config.makefilePath}/${this.config.makefileName}`;
+      const commands = await extractCommands(filePath);
 
       if (commands.length !== 0) {
         for (let i = 0; i < commands.length; i++) {

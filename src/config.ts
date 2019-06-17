@@ -2,6 +2,7 @@ import { workspace } from "vscode";
 
 export type Config = {
   makefilePath: string;
+  makefileName: string;
   unitTestCommand: string;
   integrationTestCommand: string;
   filePathEnv: string;
@@ -14,6 +15,7 @@ const getConfig = (): Config => {
 
   return {
     makefilePath: config.makefilePath,
+    makefileName: config.makefileName,
     unitTestCommand: config.unitTestCommand,
     integrationTestCommand: config.integrationTestCommand,
     filePathEnv: config.filePathEnv,

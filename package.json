@@ -44,6 +44,12 @@
 					"description": "Path to a Makefile",
 					"scope": "resource"
 				},
+				"makefileCommandRunner.makefileName": {
+					"type": "string",
+					"default": "Makefile",
+					"description": "Makefile name",
+					"scope": "resource"
+				},
 				"makefileCommandRunner.unitTestCommand": {
 					"type": "string",
 					"default": "test-unit",
