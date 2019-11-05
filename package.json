@@ -77,7 +77,7 @@
 				"makefileCommandRunner.filePathEnv": {
 					"type": "string",
 					"default": "FILE_PATH",
-					"description": "File path environment varible used to pass down the relative file path",
+					"description": "File path environment variable used to pass down the relative file path",
 					"scope": "resource"
 				}
 			}
